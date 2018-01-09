@@ -15,7 +15,12 @@
 */
 
 //Code here
+var me = {
+  name: 'Alan',
+  age: '150'
+}
 
+alert(me.name)
 
 
 ////////// PROBLEM 2 //////////
@@ -26,7 +31,14 @@
 */
 
 //Code here
-
+var favoriteThings= {
+  band: 'Bon Jovi',
+  food: 'Pizza',
+  person: 'Tawni',
+  book: 'White fang',
+  movie: 'Matrix',
+  holiday: 'St. Patricks'  
+}
 
 
 /*
@@ -35,13 +47,16 @@
 
 //Code here
 
-
+favoriteThings.car = 'Volvo'
+favoriteThings.brand = "Ford"
 
 /*
   Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
 //Code here
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter'
 
 
 
@@ -57,14 +72,16 @@
 
 //Code here
 
-
-
+var backPack = {};
+var item = 'firstPocket';
+backPack[item] = 'chapstick'
+backPack.color = 'Red'
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
-
+alert(backPack)
 
 
 /*
@@ -74,6 +91,7 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
+console.log(backPack)
 
 
 
@@ -97,8 +115,8 @@ var user2 = {
 */
 
 //Code Here
-
-
+user2.name = 'Tyler S. McGinnis';
+user2.email = 'tyler.mcginnis@devmounta.in';
 
 ////////// EXTRA PRACTICE PROBLEMS BELOW //////////
 
@@ -109,8 +127,7 @@ var user2 = {
 */
 
 //Code Here
-
-
+var methodCollection = {};
 
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object. 
@@ -119,14 +136,16 @@ var user2 = {
 
 //Code Here
 
-
+methodCollection.alertHello = () => {alert('hello')};
+methodCollection.logHello = ()=>{console.log('hello')}
 
 /*
   Now call your alertHello and logHello methods.
 */
 
 //Code Here
-
+methodCollection.alertHello();
+methodCollection.logHello();
 
 
 ////////// PROBLEM 6 //////////
@@ -137,8 +156,13 @@ var user2 = {
 */
 
 //Code Here
-
-
+function makePerson(name, birthday, ssn){
+  return {
+    name: name,
+    birthday: birthday,
+    ssn: ssn
+  }
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -148,5 +172,13 @@ var user2 = {
 */
 
 //Code Here
-
-
+function makeCard(cardNumber, expirationDate, securityCode){
+  var max = 999999999;
+  var min = 10000000
+  var newCardNumber=(Math.floor(Math.random()*(max - min)+ min))
+  return{
+    cardNumber: newCardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode
+  }
+}
